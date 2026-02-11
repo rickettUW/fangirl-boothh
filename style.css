@@ -1,69 +1,24 @@
 
-html, body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  overflow: hidden;
-  background: black;
-  font-family: system-ui, sans-serif;
+#filterStar {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  font-size: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 20;
 }
 
-.screen {
-  position: fixed;
-  inset: 0;
-}
-
-.hidden {
-  display: none;
-}
-
-#video {
-  position: fixed;
-  inset: 0;
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover;
-  transform: scaleX(-1);
-}
-
-/* INTRO */
-#intro {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: white;
-}
-
-#enterBtn {
-  font-size: 18px;
-  padding: 14px 22px;
-  border: 2px solid black;
-  background: white;
-}
-
-/* CONTROLS */
-.controls {
-  position: fixed;
-  bottom: 20px;
-  width: 100%;
-  display: flex;
-  gap: 8px;
-  justify-content: center;
-}
-
-select, button {
-  padding: 8px 10px;
+#filterLabel {
+  position: absolute;
+  top: 56px;
+  right: 12px;
   font-size: 14px;
-}
-
-/* COUNTDOWN */
-#countdown {
-  position: fixed;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 80px;
-  color: white;
-  pointer-events: none;
+  background: rgba(255,255,255,0.85);
+  padding: 6px 10px;
+  border-radius: 8px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  z-index: 20;
 }
