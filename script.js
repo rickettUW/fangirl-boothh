@@ -121,6 +121,28 @@ function downloadCanvas(canvas) {
   link.download = "fangirl-photo.png";
   link.href = canvas.toDataURL("image/png");
   link.click();
+}let filterIndex = 0;
+const video = document.getElementById("video");
+const star = document.getElementById("filterStar");
+const label = document.getElementById("filterLabel");
+
+function applyFilter() {
+  video.style.filter = filters[filterIndex].css;
+  label.textContent = filters[filterIndex].name;
+  label.style.opacity = 1;
+
+  setTimeout(() => {
+    label.style.opacity = 0;
+  }, 1200);
 }
+
+star.addEventListener("click", () => {
+  filterIndex = (filterIndex + 1) % filters.length;
+  applyFilter();
+});
+
+// apply first filter on load
+applyFilter();
+
 
 const wait = ms => new Promise(r => setTimeout(r, ms));
