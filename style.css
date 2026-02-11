@@ -1,24 +1,20 @@
-
-#filterStar {
+#controls {
   position: absolute;
-  top: 16px;
-  right: 16px;
-  font-size: 28px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  z-index: 20;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  background: rgba(255,255,255,0.9);
+  padding: 10px 12px;
+  border-radius: 999px;
+  z-index: 50;
 }
 
-#filterLabel {
-  position: absolute;
-  top: 56px;
-  right: 12px;
+#controls select,
+#controls button {
   font-size: 14px;
-  background: rgba(255,255,255,0.85);
-  padding: 6px 10px;
-  border-radius: 8px;
-  opacity: 0;
-  transition: opacity 0.3s;
-  z-index: 20;
+  border-radius: 999px;
+  border: none;
+  padding: 8px 12px;
 }
