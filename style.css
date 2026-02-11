@@ -1,0 +1,47 @@
+
+* { box-sizing: border-box; margin:0; padding:0; }
+body, html {
+  width:100%;
+  height:100%;
+  background:#efeae2;
+  font-family: sans-serif;
+}
+
+.screen {
+  position:fixed;
+  inset:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.hidden { display:none; }
+
+.intro-img {
+  width:100%;
+  height:100%;
+  object-fit:contain;
+}
+
+#enterBtn {
+  position:absolute;
+  padding:14px 24px;
+  border:2px solid #000;
+  background:#fff;
+  font-size:18px;
+  cursor:pointer;
+}
+
+#video {
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+#snap {
+  position:absolute;
+  bottom:30px;
+  padding:14px 22px;
+  border:none;
+  border-radius:20px;
+}
