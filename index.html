@@ -1,23 +1,51 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Fangirl Photo Booth</title>
-<link rel="stylesheet" href="style.css"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fangirl Photo Booth</title>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
 
+<!-- INTRO -->
 <div id="intro" class="screen">
-  <img src="assets/intro.png" class="intro-img"/>
   <button id="enterBtn">enter →</button>
 </div>
 
+<!-- BOOTH -->
 <div id="booth" class="screen hidden">
+
   <video id="video" autoplay playsinline></video>
+
+  <!-- Countdown -->
   <div id="countdown"></div>
-  <button id="snap">Take Photo</button>
+
+  <!-- Controls -->
+  <div class="controls">
+    <select id="mode">
+      <option value="single">Single (TikTok)</option>
+      <option value="strip">4-Photo Strip</option>
+    </select>
+
+    <select id="filter">
+      <option value="none">No Filter</option>
+      <option value="vintage">Vintage Booth</option>
+      <option value="bw">Grainy B&W</option>
+      <option value="sepia">Sepia Film</option>
+    </select>
+
+    <select id="frameColor">
+      <option value="#FEFAF0">Milk</option>
+      <option value="#C1DBE8">Pastel Blue</option>
+      <option value="#43302E">Old Burgundy</option>
+      <option value="#580200">Deep Red</option>
+      <option value="#695808">Olive</option>
+    </select>
+
+    <button id="snap">Take Photo</button>
+  </div>
+
 </div>
 
 <script src="script.js"></script>
