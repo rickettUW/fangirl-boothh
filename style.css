@@ -1,47 +1,69 @@
 
-* { box-sizing: border-box; margin:0; padding:0; }
-body, html {
-  width:100%;
-  height:100%;
-  background:#efeae2;
-  font-family: sans-serif;
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  background: black;
+  font-family: system-ui, sans-serif;
 }
 
 .screen {
-  position:fixed;
-  inset:0;
-  display:flex;
-  align-items:center;
-  justify-content:center;
+  position: fixed;
+  inset: 0;
 }
 
-.hidden { display:none; }
-
-.intro-img {
-  width:100%;
-  height:100%;
-  object-fit:contain;
-}
-
-#enterBtn {
-  position:absolute;
-  padding:14px 24px;
-  border:2px solid #000;
-  background:#fff;
-  font-size:18px;
-  cursor:pointer;
+.hidden {
+  display: none;
 }
 
 #video {
-  width:100%;
-  height:100%;
-  object-fit:cover;
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  transform: scaleX(-1);
 }
 
-#snap {
-  position:absolute;
-  bottom:30px;
-  padding:14px 22px;
-  border:none;
-  border-radius:20px;
+/* INTRO */
+#intro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+}
+
+#enterBtn {
+  font-size: 18px;
+  padding: 14px 22px;
+  border: 2px solid black;
+  background: white;
+}
+
+/* CONTROLS */
+.controls {
+  position: fixed;
+  bottom: 20px;
+  width: 100%;
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+select, button {
+  padding: 8px 10px;
+  font-size: 14px;
+}
+
+/* COUNTDOWN */
+#countdown {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 80px;
+  color: white;
+  pointer-events: none;
 }
